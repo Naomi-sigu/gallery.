@@ -3,6 +3,13 @@
 {% block content %}
 {{block.super}}
     {%for image in images%}
-    <img src="{{image.image_path.url}}" alt="">
+    <div class="container">
+        <div class="row">
+            <img src="{{image.image_path.url}}" class="img-responsive" alt="">
+        </div>
+        <div class="row">
+            <h1 class="text-center">{{images.category}}</h1> 
+        </div>
+    </div>
     {%endfor %}
 {% endblock %}
