@@ -1,6 +1,7 @@
-Gallery
+## GALLERY
+
 4 October 2019
-By Naomi-sigu
+## By Naomi-sigu
 
 ## Project Description
 This is a personal gallery application that displays photos for others to see.
