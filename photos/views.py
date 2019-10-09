@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http  import HttpResponse
+from .models import Image
 
 # Create your views here.
 def welcome(request):
-    return HttpResponse('Welcome to my gallery!')
+     images = Image.get_images()
+     return render(request, 'home.html', {"images":images})
