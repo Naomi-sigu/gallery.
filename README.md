@@ -14,13 +14,13 @@ This is a personal gallery application that displays photos for others to see.
 * A user can view photos based on the location they were taken.
 
 ## Setup/Installation Requirements
-Python version 3
-pip
-Django
-Django-bootstrap3
-Heroku
-Gunicorn
-Internet connection
+* Python version 3
+* pip
+* Django
+* Django-bootstrap3
+* Heroku
+* Gunicorn
+* Internet connection
 
 ## Installation Process
 * Navigate to https://github.com/Naomi-sigu/gallery.
