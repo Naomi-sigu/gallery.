@@ -11,11 +11,10 @@
     <div class="navbar-header">
       <a class="navbar-brand" href="">GalleriA</a>
     </div>
-  </div>
-  <!-- Adding a search form  -->
+     <!-- Adding a search form  -->
   <div class="col-sm-4 col-md-4 navbar-right">
 
-    
+    <form class="navbar-form" role="search" action="{% url 'search_results' %}">
 
         <div class="input-group">
             <input type="text" class="form-control" placeholder="Search Categories" name="category">
@@ -28,6 +27,8 @@
     </form>
 </div>
 <!-- search form end -->
+  </div>
+ 
       
 </nav>
 </body>
