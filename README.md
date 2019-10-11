@@ -4,7 +4,7 @@
 ## By Naomi-sigu
 
 ## Project Description
-This is a personal gallery application that displays photos for others to see.
+This is a personal gallery application created for users to see the different categories and locations for different images.
 
 ## User stories
 * A user can view different photos that interest them.
