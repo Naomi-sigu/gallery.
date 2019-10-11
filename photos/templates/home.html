@@ -3,21 +3,44 @@
 {% block content %}
 {{block.super}}
 
-    <div class="container">
-            
-        <div class="row">
-            {%for image in images%}
-            <div class="col-md-4">
-            <img src="{{image.image_path.url}}" class="img-responsive" alt="">
-            </div>
-            {%endfor %}
+<div class="container">
+
+    <div class="row">
+        {%for image in images%}
+        <div class="col-md-4">
+            <a href="" data-toggle="modal" data-target="#image{{image.id}}"> <img src="{{image.image_path.url}}" class="img-responsive" alt="" > </a>
         </div>
-
-
-
-        <!-- <div class="row">
-            <h1 class="text-center">{{images.category}}</h1> 
-        </div> -->
+        {%endfor %}
     </div>
-    
+</div>
+<!-- Large modal -->
+{% for image in images %}
+
+
+<!-- Modal -->
+<div class="modal fade" id="image{{image.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">{{image.image_name}}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <img src="{{image.image_path.url}}" class="img-responsive">
+            <p>{{image.location}}</p>
+            <p>{{image.category}}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endfor %}
+
 {% endblock %}
+
