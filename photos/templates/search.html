@@ -1,0 +1,27 @@
+{%extends 'base.html'%}
+{% block content %}
+<div class="container">
+
+    <div class="row">
+        {% if images%}
+            <h2>Found {{ images|length }} images in the category: {{message}}</h2>
+        {% else %}
+            <h2> Found 0 images in the category: {{message}}</h2>
+        {% endif %}
+
+    </div>
+
+    <div class="row">
+
+        {% if images %}
+            {% for image in images %}
+                <div class="col-sm-6 col-md-3">
+                    <h1>{{image.image_name}}</h1>
+                    <img src="{{ image.image_path.url }}" class="img-responsive" alt="{{ image.image_name }}">
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}
